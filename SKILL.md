@@ -21,12 +21,12 @@ Pipe-based approaches (`ng test 2>&1 | tail -20`) silently truncate output and m
 Always redirect both stdout and stderr. Use `--no-progress` to suppress the Karma progress spinner, and `NO_COLOR=1` to strip ANSI escape codes that pollute the file.
 
 ```bash
-NO_COLOR=1 ng test --no-watch --no-progress > /tmp/ng-test-output.txt 2>&1
+NO_COLOR=1 npx ng test --no-watch --no-progress > /tmp/ng-test-output.txt 2>&1
 ```
 
 To run a specific spec file:
 ```bash
-NO_COLOR=1 ng test --no-watch --no-progress --include='**/foo.spec.ts' > /tmp/ng-test-output.txt 2>&1
+NO_COLOR=1 npx ng test --no-watch --no-progress --include='**/foo.spec.ts' > /tmp/ng-test-output.txt 2>&1
 ```
 
 **Before running**, verify you can write and will be able to delete the file:
